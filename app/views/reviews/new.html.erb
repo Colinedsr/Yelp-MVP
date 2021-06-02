@@ -1,0 +1,13 @@
+<h1>Add a review</h1>
+
+<%= simple_form_for [@restaurant, @review] do |r| %>
+
+  <div class="form-inputs">
+  <%= r.input :content %>
+  <%= r.input :rating, as: :select, :collection => [0, 1, 2, 3, 4, 5] %>
+  </div>
+
+  <div class="form-actions">
+    <%= r.button :submit %>
+  </div>
+<% end %>
